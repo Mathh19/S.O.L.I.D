@@ -1,11 +1,11 @@
-type CartIem = { name: string; price: number };
+type CartItem = { name: string; price: number };
 type OrderStatus = 'open' | 'closed';
 
-export class ShoppingCart {
-  private readonly _items: CartIem[] = [];
+export class ShoppingCartLegacy {
+  private readonly _items: CartItem[] = [];
   private _orderStatus: OrderStatus = 'open';
 
-  addItem(item: CartIem): void {
+  addItem(item: CartItem): void {
     this._items.push(item);
   }
 
@@ -48,7 +48,7 @@ export class ShoppingCart {
     this._items.length = 0;
   }
 
-  get items(): Readonly<CartIem[]> {
+  get items(): Readonly<CartItem[]> {
     return this._items;
   }
 
@@ -57,7 +57,7 @@ export class ShoppingCart {
   }
 }
 
-const shoppingCart = new ShoppingCart();
+const shoppingCart = new ShoppingCartLegacy();
 shoppingCart.addItem({ name: 'Camiseta', price: 49.91 });
 shoppingCart.addItem({ name: 'Caderno', price: 9.9123 });
 shoppingCart.addItem({ name: 'Lápis', price: 1.59 });

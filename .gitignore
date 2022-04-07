@@ -15,6 +15,11 @@ lerna-debug.log*
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
+# Config files
+.editorconfig
+.eslintrc.js
+.prettierrc.js
+
 # Runtime data
 pids
 *.pid
